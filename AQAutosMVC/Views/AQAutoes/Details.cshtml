@@ -1,0 +1,60 @@
+﻿@model AQAutosMVC.Models.AQAuto
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>AQAuto</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AQMarca)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AQMarca)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AQAnio)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AQAnio)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AQCombustible)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AQCombustible)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AQUsado)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AQUsado)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AQPrecio)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AQPrecio)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AqEmaildistribuidor)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AqEmaildistribuidor)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AQFechaIngreso)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AQFechaIngreso)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.AQAutoID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

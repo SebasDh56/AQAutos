@@ -1,0 +1,71 @@
+﻿@model IEnumerable<AQAutosMVC.Models.AQAuto>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.AQMarca)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AQAnio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AQCombustible)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AQUsado)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AQPrecio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AqEmaildistribuidor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AQFechaIngreso)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.AQMarca)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AQAnio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AQCombustible)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AQUsado)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AQPrecio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AqEmaildistribuidor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AQFechaIngreso)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.AQAutoID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.AQAutoID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.AQAutoID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

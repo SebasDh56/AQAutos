@@ -1,0 +1,63 @@
+﻿@model AQAutosMVC.Models.AQAuto
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>AQAuto</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="AQMarca" class="control-label"></label>
+                <input asp-for="AQMarca" class="form-control" />
+                <span asp-validation-for="AQMarca" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AQAnio" class="control-label"></label>
+                <input asp-for="AQAnio" class="form-control" />
+                <span asp-validation-for="AQAnio" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AQCombustible" class="control-label"></label>
+                <input asp-for="AQCombustible" class="form-control" />
+                <span asp-validation-for="AQCombustible" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="AQUsado" /> @Html.DisplayNameFor(model => model.AQUsado)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="AQPrecio" class="control-label"></label>
+                <input asp-for="AQPrecio" class="form-control" />
+                <span asp-validation-for="AQPrecio" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AqEmaildistribuidor" class="control-label"></label>
+                <input asp-for="AqEmaildistribuidor" class="form-control" />
+                <span asp-validation-for="AqEmaildistribuidor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AQFechaIngreso" class="control-label"></label>
+                <input asp-for="AQFechaIngreso" class="form-control" />
+                <span asp-validation-for="AQFechaIngreso" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
